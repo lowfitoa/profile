@@ -1,0 +1,48 @@
+
+a {
+  color:white;
+  text-decoration: none;
+}
+h1 {
+  margin: 100px;
+  font-size: 80px;
+  text-align: center;
+}
+p {
+  margin: 80px;
+  font-size: 50px;
+  text-align: center;
+}
+strong {
+    color:white;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+blink {
+  -webkit-animation: 2s linear infinite condemned_blink_effect; // for android
+  animation: 2s linear infinite condemned_blink_effect;
+}
+@-webkit-keyframes condemned_blink_effect { // for android
+  0% {
+      visibility: hidden;
+  }
+  50% {
+      visibility: hidden;
+  }
+  100% {
+      visibility: visible;
+  }
+}
+@keyframes condemned_blink_effect {
+  0% {
+      visibility: hidden;
+  }
+  50% {
+      visibility: hidden;
+  }
+  100% {
+      visibility: visible;
+  }
+}
