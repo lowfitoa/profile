@@ -8,9 +8,9 @@
 h1 {
   margin: 120px;
 }
-h1 > img {
-  width: 650px;
-  height: 650px;
+h1 > a > img {
+  width: 500px;
+  height: 500px;
 }
 h2 {
   margin: 100px;
@@ -20,8 +20,9 @@ h2 {
   margin: 50px;
   font-size: 50px;
 }
-br {
-  display: inline-block;
+iframe {
+  width: 60%;
+  height: 438px;
 }
 
 
