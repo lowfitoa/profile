@@ -5,17 +5,12 @@
   text-decoration: none;
   text-align: center;
 }
-h1 {
-  margin: 40px;
-}
-h1 > a > img {
-  width: 250px;
-  height: 250px;
-}
 
 h2 {
   margin: 40px;
   font-size: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .links {
   margin: 50px;
