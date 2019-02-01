@@ -5,16 +5,12 @@
   text-decoration: none;
   text-align: center;
 }
-h1 {
-  margin: 120px;
-}
-h1 > a > img {
-  width: 500px;
-  height: 500px;
-}
+
 h2 {
   margin: 100px;
   font-size: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 .links {
   margin: 50px;
@@ -22,7 +18,7 @@ h2 {
 }
 iframe {
   width: 60%;
-  height: 438px;
+  height: 600px;
 }
 
 
