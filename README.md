@@ -1,3 +1,3 @@
 # lowfitoa.github.io
 
-# Powered by 동.근.
+# Powered by Toa(이동근)
