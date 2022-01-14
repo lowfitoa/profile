@@ -7,7 +7,7 @@
 h1 {
   margin: 60px;
 }
-h1 > img {
+.cover {
   width: 70%;
   height: 70%;
 }
