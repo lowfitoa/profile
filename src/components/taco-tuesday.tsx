@@ -18,7 +18,7 @@ export const TacoTuesday = ({ color }: Props) => {
         </Link>
       </HStack>
       <SpacerV h="22px" />
-      <Link href="https://open.spotify.com/track/5fgZLijZnYUl9ckhaNjxAe?si=f2ec5d2f99a14616">
+      <Link href="https://youtu.be/fv_lfm-V_D0">
         <Img boxSize={"300px"} src="https://media-cdn.branch.so/01FSC1SW0WNT9AVTM13PQ6S1T2/taco.jpeg" />
       </Link>
     </>

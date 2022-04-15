@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { AudioPlayer } from "./components/audio-player";
 import { Icon } from "./components/icon";
 import { SpacerV } from "./components/spacerV";
+import { TacoTuesday } from "./components/taco-tuesday";
 import { platforms } from "./controllers/platforms";
 
 export const Toa = () => {
@@ -12,9 +13,9 @@ export const Toa = () => {
   return (
     <Container>
       <Stack justifyContent={"center"} alignItems={"center"} height="100vh" spacing={0}>
-        {/* <TacoTuesday color={MAIN_COLOR} /> */}
+        <TacoTuesday color={MAIN_COLOR} />
 
-        <AudioPlayer />
+        {/* <AudioPlayer /> */}
 
         <SpacerV h="32px" />
 
