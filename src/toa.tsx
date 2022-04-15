@@ -24,7 +24,7 @@ export const Toa = () => {
 
         <HStack>
           {platforms.map((item) => (
-            <Icon name={item.name} link={item.link} />
+            <Icon key={item.name} name={item.name} link={item.link} />
           ))}
         </HStack>
 
