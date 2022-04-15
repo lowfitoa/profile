@@ -7,7 +7,7 @@ import { TacoTuesday } from "./components/taco-tuesday";
 import { platforms } from "./controllers/platforms";
 import { useLocation } from "react-router-dom";
 export const Toa = () => {
-  const MAIN_COLOR = "#1F4796";
+  const MAIN_COLOR = "#2AFC7B";
   const { pathname } = useLocation();
 
   return (
@@ -17,7 +17,7 @@ export const Toa = () => {
 
         <SpacerV h="32px" />
 
-        <SpacerV h="10px" bg={MAIN_COLOR} />
+        <SpacerV h="2px" bg={MAIN_COLOR} />
 
         <SpacerV h="22px" />
 
