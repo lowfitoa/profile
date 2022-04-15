@@ -4,7 +4,7 @@
   left: 50%;
   width: 8px;
   height: 8px;
-  background-color: black;
+  background-color: #2afc7b;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   z-index: 999;
