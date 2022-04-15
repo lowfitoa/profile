@@ -8,12 +8,12 @@ interface Props {
 export const TacoTuesday = ({ color }: Props) => {
   return (
     <>
-      <Text fontSize="25px">Taco tuesday w/</Text>
-      <HStack spacing={2}>
-        <Link href="https://www.instagram.com/kpcypehway6/" fontSize="25px" _hover={{ cursor: "pointer", color: color }}>
+      <Text fontSize="28px">Taco tuesday w/</Text>
+      <HStack spacing={2} fontSize="20px">
+        <Link cursor="none" href="https://www.instagram.com/kpcypehway6/" _hover={{ color: color }}>
           @HWAY6
         </Link>
-        <Link href="https://www.instagram.com/h4nyangfromhanyang/" fontSize="25px" _hover={{ cursor: "pointer", color: color }}>
+        <Link cursor="none" href="https://www.instagram.com/h4nyangfromhanyang/" _hover={{ color: color }}>
           @H4NYANG
         </Link>
       </HStack>
