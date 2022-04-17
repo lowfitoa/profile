@@ -1,23 +1,32 @@
-import { Container, HStack, Stack } from "@chakra-ui/layout";
-
-import { AudioPlayer } from "./components/audio-player";
+import { Container, HStack, Stack, Text } from "@chakra-ui/layout";
+import { Img } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { Icon } from "./components/icon";
 import { SpacerV } from "./components/spacerV";
-import { TacoTuesday } from "./components/taco-tuesday";
 import { platforms } from "./controllers/platforms";
-import { useLocation } from "react-router-dom";
+
 export const Toa = () => {
   const MAIN_COLOR = "#2AFC7B";
-  const { pathname } = useLocation();
+
+  const [imageOrder, setImageOrder] = useState(1);
+
+  useEffect(() => {
+    if (imageOrder !== 7) {
+      setTimeout(() => {
+        setImageOrder(imageOrder + 1);
+      }, 100);
+      return;
+    }
+  }, [imageOrder]);
 
   return (
     <Container>
-      <Stack justifyContent={"center"} alignItems={"center"} height="100vh" spacing={0}>
-        {pathname === "/lofi" ? <AudioPlayer /> : <TacoTuesday color={MAIN_COLOR} />}
+      <Stack justifyContent={"center"} alignItems={"center"} height="100vh" spacing={0} paddingBottom="30%">
+        <Text textShadow="1px 1px #2AFC7B" fontSize={60} _hover={{ color: MAIN_COLOR, cursor: "none" }}>
+          KnownAsToa
+        </Text>
 
-        <SpacerV h="32px" />
-
-        <SpacerV h="2px" bg={MAIN_COLOR} />
+        <Img src={`img/${JSON.stringify(imageOrder)}.jpg`} />
 
         <SpacerV h="22px" />
 
@@ -26,8 +35,6 @@ export const Toa = () => {
             <Icon key={item.name} name={item.name} link={item.link} />
           ))}
         </HStack>
-
-        <SpacerV paddingBottom="30%" />
       </Stack>
     </Container>
   );

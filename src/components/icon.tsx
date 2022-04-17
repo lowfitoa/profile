@@ -1,5 +1,5 @@
 import { Img } from "@chakra-ui/image";
-import { Link, LinkProps } from "@chakra-ui/layout";
+import { Link, LinkProps, Box } from "@chakra-ui/layout";
 
 interface IconProps extends LinkProps {
   name: string;
@@ -7,8 +7,10 @@ interface IconProps extends LinkProps {
 }
 export const Icon = ({ name, link }: IconProps) => {
   return (
-    <Link href={link}>
-      <Img src={`https://media-cdn.branch.so/01FSC1T29GPJ6C7C558CY6MDZW/${name}.svg`} />
-    </Link>
+    <Box filter="auto" blur="2px" _hover={{ blur: "none" }}>
+      <Link href={link}>
+        <Img src={`img/${name}.svg`} />
+      </Link>
+    </Box>
   );
 };
