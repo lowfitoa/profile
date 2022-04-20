@@ -10,19 +10,28 @@ export const Toa = () => {
 
   const [imageOrder, setImageOrder] = useState(1);
 
-  useEffect(() => {
-    if (imageOrder !== 7) {
-      setTimeout(() => {
-        setImageOrder(imageOrder + 1);
-      }, 100);
+  const [toggleColor, setToggleColor] = useState(true);
+
+  const changeOrder = (order: number) => {
+    if (order === 7) {
+      setImageOrder(1);
       return;
     }
-  }, [imageOrder]);
+    setImageOrder(order + 1);
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      changeOrder(imageOrder);
+      setToggleColor(!toggleColor);
+    }, 200);
+    return;
+  }, [imageOrder, toggleColor]);
 
   return (
     <Container>
       <Stack justifyContent={"center"} alignItems={"center"} height="100vh" spacing={0} paddingBottom="30%">
-        <Text textShadow="1px 1px #2AFC7B" fontSize={60} _hover={{ color: MAIN_COLOR, cursor: "none" }}>
+        <Text textShadow="1px 1px #2AFC7B" fontSize={60} _hover={{ color: MAIN_COLOR, cursor: "none" }} color={toggleColor ? undefined : MAIN_COLOR}>
           KnownAsToa
         </Text>
 
