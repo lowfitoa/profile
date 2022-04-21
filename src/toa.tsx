@@ -1,4 +1,4 @@
-import { Container, HStack, Stack, Text } from "@chakra-ui/layout";
+import { Container, HStack, Stack, Text, Link } from "@chakra-ui/layout";
 import { Img } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Icon } from "./components/icon";
@@ -42,11 +42,15 @@ export const Toa = () => {
   return (
     <Container>
       <Stack justifyContent={"center"} alignItems={"center"} height="100vh" spacing={0} paddingBottom="30%">
-        <Text textShadow="1px 1px #2AFC7B" fontSize={60} _hover={{ color: MAIN_COLOR, cursor: "none" }} color={toggleColor ? undefined : MAIN_COLOR}>
-          KnownAsToa
-        </Text>
-
-        <Img src={`img/${JSON.stringify(imageOrder)}.jpg`} />
+        <Link href={'https://www.instagram.com/knownastoa/'}>
+          <Text textShadow="1px 1px #2AFC7B" fontSize={60} _hover={{ color: MAIN_COLOR, cursor: "none" }} color={toggleColor ? undefined : MAIN_COLOR}>
+            KnownAsToa
+          </Text>
+        </Link>
+        
+        <Link href={'https://www.instagram.com/knownastoa/'}>
+          <Img src={`img/${JSON.stringify(imageOrder)}.jpg`} />
+        </Link>
 
         <SpacerV h="22px" />
 
