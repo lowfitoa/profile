@@ -37,18 +37,18 @@ export const Toa = () => {
       setToggleColor(!toggleColor);
     }, 240);
     return;
-  }, [imageOrder, toggleColor]);
+  }, [imageOrder, iconBlur, toggleColor]);
 
   return (
     <Container>
       <Stack justifyContent={"center"} alignItems={"center"} height="100vh" spacing={0} paddingBottom="30%">
-        <Link href={'https://www.instagram.com/knownastoa/'}>
+        <Link href={'https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw'}>
           <Text textShadow="1px 1px #2AFC7B" fontSize={60} _hover={{ color: MAIN_COLOR, cursor: "none" }} color={toggleColor ? undefined : MAIN_COLOR}>
             KnownAsToa
           </Text>
         </Link>
         
-        <Link href={'https://www.instagram.com/knownastoa/'}>
+        <Link href={'https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw'}>
           <Img src={`img/${JSON.stringify(imageOrder)}.jpg`} />
         </Link>
 
