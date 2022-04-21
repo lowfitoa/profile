@@ -10,6 +10,8 @@ export const Toa = () => {
 
   const [imageOrder, setImageOrder] = useState(1);
 
+  const [iconBlur, setIconBlur] = useState(0);
+
   const [toggleColor, setToggleColor] = useState(true);
 
   const changeOrder = (order: number) => {
@@ -20,11 +22,20 @@ export const Toa = () => {
     setImageOrder(order + 1);
   };
 
+  const changeBlur = (blur: number) => {
+    if(blur === 2){
+      setIconBlur(0);
+      return
+    }
+    setIconBlur(blur + 1);
+  }
+
   useEffect(() => {
     setTimeout(() => {
       changeOrder(imageOrder);
+      changeBlur(iconBlur);
       setToggleColor(!toggleColor);
-    }, 200);
+    }, 240);
     return;
   }, [imageOrder, toggleColor]);
 
@@ -40,8 +51,8 @@ export const Toa = () => {
         <SpacerV h="22px" />
 
         <HStack>
-          {platforms.map((item) => (
-            <Icon key={item.name} name={item.name} link={item.link} />
+          {platforms.map((item, index) => (
+            <Icon blur={index === iconBlur ? 0 : 2} key={item.name} name={item.name} link={item.link} />
           ))}
         </HStack>
       </Stack>
