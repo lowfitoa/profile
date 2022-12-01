@@ -57,7 +57,7 @@ export const Toa = () => {
             _hover={{ color: MAIN_COLOR, cursor: "none" }}
             color={toggleColor ? undefined : MAIN_COLOR}
           >
-            KnownAsToa
+            KnownAsTOA
           </Text>
         </Link>
 
