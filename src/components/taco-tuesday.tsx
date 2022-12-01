@@ -13,13 +13,20 @@ export const TacoTuesday = ({ color }: Props) => {
         <Link cursor="none" href="https://www.instagram.com/kpcypehway6/" _hover={{ color: color }}>
           @HWAY6
         </Link>
-        <Link cursor="none" href="https://www.instagram.com/h4nyangfromhanyang/" _hover={{ color: color }}>
+        <Link
+          cursor="none"
+          href="https://www.instagram.com/h4nyangfromhanyang/"
+          _hover={{ color: color }}
+        >
           @H4NYANG
         </Link>
       </HStack>
       <SpacerV h="22px" />
       <Link href="https://youtu.be/fv_lfm-V_D0">
-        <Img boxSize={"300px"} src="https://media-cdn.branch.so/01FSC1SW0WNT9AVTM13PQ6S1T2/taco.jpeg" />
+        <Img
+          boxSize={"300px"}
+          src="https://media-cdn.branch.so/01FSC1SW0WNT9AVTM13PQ6S1T2/taco.jpeg"
+        />
       </Link>
     </>
   );

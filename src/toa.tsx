@@ -23,12 +23,12 @@ export const Toa = () => {
   };
 
   const changeBlur = (blur: number) => {
-    if(blur === 2){
+    if (blur === 2) {
       setIconBlur(0);
-      return
+      return;
     }
     setIconBlur(blur + 1);
-  }
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -41,14 +41,29 @@ export const Toa = () => {
 
   return (
     <Container>
-      <Stack justifyContent={"center"} alignItems={"center"} height="100vh" spacing={0} paddingBottom="30%">
-        <Link href={'https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw'}>
-          <Text textShadow="1px 1px #2AFC7B" fontSize={60} _hover={{ color: MAIN_COLOR, cursor: "none" }} color={toggleColor ? undefined : MAIN_COLOR}>
+      <Stack
+        justifyContent={"center"}
+        alignItems={"center"}
+        height="100vh"
+        spacing={0}
+        paddingBottom="30%"
+      >
+        <Link
+          href={"https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw"}
+        >
+          <Text
+            textShadow="1px 1px #2AFC7B"
+            fontSize={60}
+            _hover={{ color: MAIN_COLOR, cursor: "none" }}
+            color={toggleColor ? undefined : MAIN_COLOR}
+          >
             KnownAsToa
           </Text>
         </Link>
-        
-        <Link href={'https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw'}>
+
+        <Link
+          href={"https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw"}
+        >
           <Img src={`img/${JSON.stringify(imageOrder)}.jpg`} />
         </Link>
 
@@ -56,7 +71,12 @@ export const Toa = () => {
 
         <HStack>
           {platforms.map((item, index) => (
-            <Icon blur={index === iconBlur ? 0 : 2} key={item.name} name={item.name} link={item.link} />
+            <Icon
+              blur={index === iconBlur ? 0 : 2}
+              key={item.name}
+              name={item.name}
+              link={item.link}
+            />
           ))}
         </HStack>
       </Stack>

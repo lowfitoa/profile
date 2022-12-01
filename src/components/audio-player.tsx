@@ -29,7 +29,10 @@ export const AudioPlayer = () => {
       </Text>
 
       <audio ref={audioRef}>
-        <source src="https://media-cdn.branch.so/01FSC1T29GPJ6C7C558CY6MDZW/foo.wav" type="audio/wav"></source>
+        <source
+          src="https://media-cdn.branch.so/01FSC1T29GPJ6C7C558CY6MDZW/foo.wav"
+          type="audio/wav"
+        ></source>
       </audio>
     </>
   );
