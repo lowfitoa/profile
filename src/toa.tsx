@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Icon } from "./components/icon";
 import { SpacerV } from "./components/spacerV";
 import { platforms } from "./controllers/platforms";
+import { range } from "lodash";
 
 export const Toa = () => {
   const MAIN_COLOR = "#2AFC7B";
@@ -13,12 +14,23 @@ export const Toa = () => {
   const [toggleColor, setToggleColor] = useState(true);
 
   const changeOrder = (order: number) => {
-    if (order === 7) {
-      setImageOrder(1);
+    if (order === 6) {
+      setImageOrder(0);
       return;
     }
     setImageOrder(order + 1);
   };
+
+  const fooArr = range(0, 7).map((item) => ({
+    name: `image-${item}`,
+    comp: (index: number) => (
+      <Img
+        display={index === imageOrder ? undefined : "none"}
+        src={`img/${JSON.stringify(item)}.jpg`}
+      />
+    ),
+    imageName: `img/${JSON.stringify(item)}.jpg`,
+  }));
 
   useEffect(() => {
     setTimeout(() => {
@@ -48,7 +60,7 @@ export const Toa = () => {
             _hover={{ color: MAIN_COLOR, cursor: "none" }}
             color={toggleColor ? undefined : MAIN_COLOR}
           >
-            KnownAsTOA
+            KnownAsToa
           </Text>
         </Link>
 
@@ -57,13 +69,13 @@ export const Toa = () => {
             "https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw"
           }
         >
-          <Img src={`img/${JSON.stringify(imageOrder)}.jpg`} />
+          {fooArr.map((item, index) => item.comp(index))}
         </Link>
 
         <SpacerV h="22px" />
 
         <HStack>
-          {platforms.map((item, index) => (
+          {platforms.map((item) => (
             <Icon blur={2} key={item.name} name={item.name} link={item.link} />
           ))}
         </HStack>
