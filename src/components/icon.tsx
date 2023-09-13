@@ -8,7 +8,7 @@ interface IconProps extends LinkProps {
 }
 export const Icon = ({ name, link, blur }: IconProps) => {
   return (
-    <Box filter="auto" blur={`${blur}px`} _hover={{ blur: "none" }}>
+    <Box filter="auto" blur={`${blur}px`} _hover={{ blur: blur }}>
       <Link href={link}>
         <Img src={`img/${name}.svg`} />
       </Link>

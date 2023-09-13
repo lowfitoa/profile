@@ -10,8 +10,6 @@ export const Toa = () => {
 
   const [imageOrder, setImageOrder] = useState(1);
 
-  const [iconBlur, setIconBlur] = useState(0);
-
   const [toggleColor, setToggleColor] = useState(true);
 
   const changeOrder = (order: number) => {
@@ -22,22 +20,13 @@ export const Toa = () => {
     setImageOrder(order + 1);
   };
 
-  const changeBlur = (blur: number) => {
-    if (blur === 2) {
-      setIconBlur(0);
-      return;
-    }
-    setIconBlur(blur + 1);
-  };
-
   useEffect(() => {
     setTimeout(() => {
       changeOrder(imageOrder);
-      changeBlur(iconBlur);
       setToggleColor(!toggleColor);
     }, 240);
     return;
-  }, [imageOrder, iconBlur, toggleColor]);
+  }, [imageOrder, toggleColor]);
 
   return (
     <Container>
@@ -49,7 +38,9 @@ export const Toa = () => {
         paddingBottom="30%"
       >
         <Link
-          href={"https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw"}
+          href={
+            "https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw"
+          }
         >
           <Text
             textShadow="1px 1px #2AFC7B"
@@ -62,7 +53,9 @@ export const Toa = () => {
         </Link>
 
         <Link
-          href={"https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw"}
+          href={
+            "https://open.spotify.com/artist/3lCSUS2OhV9vdwsuRmo3nq?si=nLHQnKDnRD6jwxBnAjlLtw"
+          }
         >
           <Img src={`img/${JSON.stringify(imageOrder)}.jpg`} />
         </Link>
@@ -71,12 +64,7 @@ export const Toa = () => {
 
         <HStack>
           {platforms.map((item, index) => (
-            <Icon
-              blur={index === iconBlur ? 0 : 2}
-              key={item.name}
-              name={item.name}
-              link={item.link}
-            />
+            <Icon blur={2} key={item.name} name={item.name} link={item.link} />
           ))}
         </HStack>
       </Stack>
