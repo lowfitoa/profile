@@ -1,9 +1,13 @@
 import "./custom-dot.css";
 import { useMousePosition } from "../hooks/useMousePosition";
+import { isMobile } from "react-device-detect";
 
 export const CustomDot = () => {
   // 1.
   const { x, y } = useMousePosition();
+  if (isMobile) {
+    return <></>;
+  }
   return (
     <>
       {/* 2. */}
