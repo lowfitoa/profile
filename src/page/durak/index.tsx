@@ -19,12 +19,12 @@ export const Durak = () => {
         height="100vh"
         spacing={0}
       >
-        <Text fontSize={90} color="#2AFC7B">
+        <Text fontSize={60} color="#2AFC7B">
           DURAK
         </Text>
 
         <SpacerV h="22px" />
-        <HStack spacing={"40px"} pb={"40px"}>
+        <HStack spacing={"40px"} pb={"20px"}>
           <Button
             onClick={() => {
               if (cozerkIndex === 3) {
@@ -54,7 +54,7 @@ export const Durak = () => {
           />
         </HStack>
 
-        <Stack w="full" justifyContent={"space-between"} maxW="500px">
+        <Stack w="full" justifyContent={"space-between"} pb="30px">
           <MobileCountCard
             name="Dasha"
             count={dashaCount}
