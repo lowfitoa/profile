@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toa } from "./toa";
 import { CustomDot } from "./components/custom-dot";
 import { Durak } from "./page/durak";
+import { isMobile } from "react-device-detect";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -13,6 +14,6 @@ export const App = () => (
         <Route path="/durak" element={<Durak />} />
       </Routes>
     </BrowserRouter>
-    <CustomDot />
+    {!isMobile && <CustomDot />}
   </ChakraProvider>
 );
