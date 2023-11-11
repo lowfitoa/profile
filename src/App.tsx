@@ -3,12 +3,14 @@ import * as React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toa } from "./toa";
 import { CustomDot } from "./components/custom-dot";
+import { Durak } from "./page/durak";
 
 export const App = () => (
   <ChakraProvider theme={theme}>
     <BrowserRouter>
       <Routes>
         <Route path="*" element={<Toa />} />
+        <Route path="/durak" element={<Durak />} />
       </Routes>
     </BrowserRouter>
     <CustomDot />
