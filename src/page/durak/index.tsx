@@ -11,57 +11,57 @@ export const Durak = () => {
   const [drawCount, setDrawCount] = useState<number>(0);
 
   return (
-    <Container>
-      <Stack
-        justifyContent={"center"}
-        alignItems={"center"}
-        height="100vh"
-        spacing={0}
-        paddingBottom="30%"
-      >
-        <Text fontSize={120} color="#2AFC7B">
-          DURAK
-        </Text>
+    // <Container>
+    <Stack
+      justifyContent={"center"}
+      alignItems={"center"}
+      height="100vh"
+      spacing={0}
+      paddingBottom="30%"
+    >
+      <Text fontSize={120} color="#2AFC7B">
+        DURAK
+      </Text>
 
-        <SpacerV h="22px" />
-        <HStack spacing={"40px"} pb={"40px"}>
-          <Button
-            onClick={() => {
-              if (cozerkIndex === 3) {
-                setCozerkIndex(0);
-                return;
-              }
-              setCozerkIndex(cozerkIndex + 1);
-            }}
-          ></Button>
-          <Box px={"90px"} borderWidth={"3px"} borderRadius={16} py="135px">
-            <Text
-              color="white"
-              fontSize={"100px"}
-              minW={"100px"}
-              textAlign="center"
-            >
-              {cozerk[cozerkIndex]}
-            </Text>
-          </Box>
-          <Button
-            onClick={() => {
-              if (cozerkIndex === 0) {
-                setCozerkIndex(3);
-                return;
-              }
-              setCozerkIndex(cozerkIndex - 1);
-            }}
-          />
-        </HStack>
+      <SpacerV h="22px" />
+      <HStack spacing={"40px"} pb={"40px"}>
+        <Button
+          onClick={() => {
+            if (cozerkIndex === 3) {
+              setCozerkIndex(0);
+              return;
+            }
+            setCozerkIndex(cozerkIndex + 1);
+          }}
+        ></Button>
+        <Box px={"60px"} borderWidth={"3px"} borderRadius={16} py="90px">
+          <Text
+            color="white"
+            fontSize={"100px"}
+            minW={"100px"}
+            textAlign="center"
+          >
+            {cozerk[cozerkIndex]}
+          </Text>
+        </Box>
+        <Button
+          onClick={() => {
+            if (cozerkIndex === 0) {
+              setCozerkIndex(3);
+              return;
+            }
+            setCozerkIndex(cozerkIndex - 1);
+          }}
+        />
+      </HStack>
 
-        <HStack w="full" justifyContent={"space-between"}>
-          <CountCard name="Dasha" count={dashaCount} setCount={setDashaCount} />
-          <CountCard name="Draw" count={drawCount} setCount={setDrawCount} />
-          <CountCard name="Toa" count={toaCount} setCount={setToaCount} />
-        </HStack>
-      </Stack>
-    </Container>
+      <HStack w="full" justifyContent={"space-between"}>
+        <CountCard name="Dasha" count={dashaCount} setCount={setDashaCount} />
+        <CountCard name="Draw" count={drawCount} setCount={setDrawCount} />
+        <CountCard name="Toa" count={toaCount} setCount={setToaCount} />
+      </HStack>
+    </Stack>
+    // </Container>
   );
 };
 
@@ -78,7 +78,7 @@ const CountCard = ({ name, count, setCount }: CountCardProps) => {
       </Text>
       <HStack>
         <Button
-          variant="unstyled"
+          variant={"outline"}
           color={"white"}
           onClick={() => {
             if (count === 0) {
@@ -98,7 +98,7 @@ const CountCard = ({ name, count, setCount }: CountCardProps) => {
           {count}
         </Text>
         <Button
-          variant="unstyled"
+          variant={"outline"}
           color={"white"}
           onClick={() => setCount(count + 1)}
         >
