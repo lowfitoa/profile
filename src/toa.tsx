@@ -43,7 +43,7 @@ export const Toa = () => {
   return (
     <Container>
       <Stack
-        justifyContent={"center"}
+        justifyContent="center"
         alignItems={"center"}
         height="100vh"
         spacing={0}
