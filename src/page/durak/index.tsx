@@ -35,7 +35,7 @@ export const Durak = () => {
             }}
           ></Button>
           <Box px={"90px"} borderWidth={"3px"} borderRadius={16} py="135px">
-            <Text color="white" fontSize={"100px"}>
+            <Text color="white" fontSize={"100px"} minW={"100px"}>
               {cozerk[cozerkIndex]}
             </Text>
           </Box>
