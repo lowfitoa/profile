@@ -53,7 +53,7 @@ export const Durak = () => {
         />
       </HStack>
 
-      <HStack w="full" justifyContent={"space-between"} maxW="400px">
+      <HStack w="full" justifyContent={"space-between"} maxW="500px">
         <CountCard name="Dasha" count={dashaCount} setCount={setDashaCount} />
         <CountCard name="Draw" count={drawCount} setCount={setDrawCount} />
         <CountCard name="Toa" count={toaCount} setCount={setToaCount} />
