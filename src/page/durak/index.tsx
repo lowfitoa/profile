@@ -11,13 +11,11 @@ export const Durak = () => {
   const [drawCount, setDrawCount] = useState<number>(0);
 
   return (
-    // <Container>
     <Stack
       justifyContent={"center"}
       alignItems={"center"}
       height="100vh"
       spacing={0}
-      paddingBottom="30%"
     >
       <Text fontSize={120} color="#2AFC7B">
         DURAK
@@ -55,13 +53,12 @@ export const Durak = () => {
         />
       </HStack>
 
-      <HStack w="full" justifyContent={"space-between"}>
+      <HStack w="full" justifyContent={"space-between"} maxW="400px">
         <CountCard name="Dasha" count={dashaCount} setCount={setDashaCount} />
         <CountCard name="Draw" count={drawCount} setCount={setDrawCount} />
         <CountCard name="Toa" count={toaCount} setCount={setToaCount} />
       </HStack>
     </Stack>
-    // </Container>
   );
 };
 
